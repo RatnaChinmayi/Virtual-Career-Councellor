@@ -13,23 +13,23 @@ Students often face difficulty in selecting the right career due to lack of pers
 ## 💡 Solution
 
 The Virtual Career Counsellor addresses this problem by offering:
-1. Personalized career recommendations  
-2. Automated guidance using AI logic  
-3. Secure cloud-based data storage  
-4. Notification support for user updates  
-5. Scalable deployment using AWS services  
+- Personalized career recommendations  
+- Automated guidance using AI logic  
+- Secure cloud-based data storage  
+- Notification support for user updates  
+- Scalable deployment using AWS services  
 
 ---
 
 ## 🚀 Features
 
-1. User registration and login  
-2. Career guidance based on interests and skills  
-3. AI-generated career recommendations  
-4. Notifications using AWS SNS  
-5. Secure user data storage using DynamoDB  
-6. Role-based secure access using AWS IAM  
-7. Scalable deployment using AWS ECS  
+- User registration and login  
+- Career guidance based on interests and skills  
+- AI-generated career recommendations  
+- Notifications using AWS SNS  
+- Secure user data storage using DynamoDB  
+- Role-based secure access using AWS IAM  
+- Scalable deployment using AWS ECS  
 
 ---
 
