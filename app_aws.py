@@ -21,7 +21,7 @@ client = Groq(api_key=GROQ_API_KEY)
 
 users_table = dynamodb.Table("VirtualCareerUsers")
 
-SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:123456789012:VirtualCareerAlerts"
+SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:677276085504:aws_capstone_topic"
 
 UPLOAD_FOLDER = "static/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Replace with your SNS topic ARN
