@@ -104,22 +104,27 @@ def register():
         try:
             users_table.put_item(
                 Item={
-                    "userId": email,
+                    "userId": str(email),          # ✅ correct key
                     "password": hashed_password
                 },
-                ConditionExpression="attribute_not_exists(email)"
+                ConditionExpression="attribute_not_exists(userId)"  # ✅ FIX
             )
 
-            send_notification("New User Registered", f"New user registered: {email}")
+            send_notification(
+                "New User Registered",
+                f"New user registered: {email}"
+            )
 
             flash("Registered successfully! Please login.", "success")
             return redirect(url_for("login"))
 
-        except ClientError:
+        except ClientError as e:
+            print("DynamoDB error:", e)
             flash("User already exists", "error")
             return redirect(url_for("register"))
 
     return render_template("register.html")
+
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -129,7 +134,7 @@ def login():
         password = request.form.get("password")
 
         response = users_table.get_item(
-            Key={"userId": email}   # ✅ MUST match DynamoDB key name
+            Key={"userId": str(email)}   # ✅ MUST match DynamoDB key name
         )
 
         user = response.get("Item")
