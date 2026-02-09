@@ -1,47 +1,60 @@
-🎓 Virtual Career Counsellor
+# 🎓 Virtual Career Counsellor
 
-The Virtual Career Counsellor is a cloud-based AI-assisted web application that provides personalized career guidance to students and job seekers. It analyzes user preferences and background information to suggest suitable career paths through an interactive interface.
+The **Virtual Career Counsellor** is a cloud-based AI-assisted web application that provides personalized career guidance to students and job seekers. It analyzes user preferences and background information to suggest suitable career paths through an interactive interface.
 
-📌 Problem Statement
+---
+
+## 📌 Problem Statement
 
 Students often face difficulty in selecting the right career due to lack of personalized counseling and limited awareness of career options. Traditional counseling methods are not scalable and are not accessible to everyone.
 
-💡 Solution
+---
+
+## 💡 Solution
 
 The Virtual Career Counsellor addresses this problem by offering:
-1.Personalized career recommendations
-2.Automated guidance using AI logic
-3.Secure cloud-based data storage
-4.Notification support for user updates
-5.Scalable deployment using AWS services
+1. Personalized career recommendations  
+2. Automated guidance using AI logic  
+3. Secure cloud-based data storage  
+4. Notification support for user updates  
+5. Scalable deployment using AWS services  
 
-🚀 Features
+---
 
-1.User registration and login
-2.Career guidance based on interests and skills
-3.AI-generated career recommendations
-4.Notifications using AWS SNS
-5.Secure user data storage using DynamoDB
-6.Role-based secure access using AWS IAM
-7.Scalable deployment using AWS ECS
+## 🚀 Features
 
-🛠️ Tech Stack
-Frontend
-HTML
-CSS
-JavaScript
+1. User registration and login  
+2. Career guidance based on interests and skills  
+3. AI-generated career recommendations  
+4. Notifications using AWS SNS  
+5. Secure user data storage using DynamoDB  
+6. Role-based secure access using AWS IAM  
+7. Scalable deployment using AWS ECS  
 
-Backend
-Python
-Flask
+---
 
-AWS Services Used
-Amazon ECS (Elastic Container Service)
-Amazon DynamoDB
-Amazon SNS (Simple Notification Service)
-AWS IAM (Identity and Access Management)
+## 🛠️ Tech Stack
 
-📁 Project Structure
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+
+### Backend
+- Python  
+- Flask  
+
+### AWS Services Used
+- Amazon ECS (Elastic Container Service)  
+- Amazon DynamoDB  
+- Amazon SNS (Simple Notification Service)  
+- AWS IAM (Identity and Access Management)  
+
+---
+
+## 📁 Project Structure
+
+```text
 Virtual-Career-Councellor/
 │
 ├── static/
@@ -63,90 +76,104 @@ Virtual-Career-Councellor/
 ├── README.md
 └── .gitignore
 
-⚙️ Local Setup Instructions
-1️⃣ Clone the repository
+ ---
+```
+### ⚙️ Local Setup Instructions
+
+## 1️⃣ Clone the repository
 git clone https://github.com/your-username/Virtual-Career-Councellor.git
 cd Virtual-Career-Councellor
-
-2️⃣ Create and activate virtual environment
+## 2️⃣ Create and Activate Virtual Environment
 python -m venv venv
 venv\Scripts\activate   # Windows
-
-3️⃣ Install dependencies
+## 3️⃣ Install Dependencies
 pip install -r requirements.txt
-
-4️⃣ Run the application
+## 4️⃣ Run the Application
 python app.py
+Application runs at: http://127.0.0.1:5000
 
+## ☁️ Deployment on AWS ECS (Using IAM, DynamoDB & SNS)
 
-Application runs at:
-http://127.0.0.1:5000/
-
-☁️ Deployment on AWS ECS (Using IAM, DynamoDB & SNS)
-🔐 Step 1: IAM Configuration
+### 🔐 Step 1: IAM Configuration
 Create an IAM Role for ECS with the following permissions:
-AmazonECSFullAccess
-AmazonDynamoDBFullAccess
-AmazonSNSFullAccess
+- AmazonECSFullAccess  
+- AmazonDynamoDBFullAccess  
+- AmazonSNSFullAccess  
 
-Purpose of IAM:
-Secure access control
-Prevent hardcoding AWS credentials
-Allow ECS tasks to interact with DynamoDB and SNS securely
+**Purpose of IAM:**
+- Secure access control  
+- Prevent hardcoding AWS credentials  
+- Allow ECS tasks to interact with DynamoDB and SNS securely  
 
-📊 Step 2: Create DynamoDB Table
-Table Name: VirtualCareerUsers
-Partition Key: user_id (String)
+---
 
-Used to store:
-User profile information
-Career preferences
-Generated career guidance data
+### 📊 Step 2: Create DynamoDB Table
+- **Table Name:** VirtualCareerUsers  
+- **Partition Key:** user_id (String)  
 
-📣 Step 3: Create SNS Topic
-Topic Name: career-notifications
-Subscription Type: Email
+**Used to store:**
+- User profile information  
+- Career preferences  
+- Generated career guidance data  
 
-Used for:
-User registration alerts
-Career recommendation notifications
+---
 
-🖥️ Step 4: Launch EC2 Instance
-Go to EC2 Console
-Choose the Required options and then Launch instance
+### 📣 Step 3: Create SNS Topic
+- **Topic Name:** career-notifications  
+- **Subscription Type:** Email  
 
-🔑 Step 5: Connect to EC2 Instance
-Using terminal / Git Bash:
+**Used for:**
+- User registration alerts  
+- Career recommendation notifications  
+
+---
+
+### 🖥️ Step 4: Launch EC2 Instance
+- Go to EC2 Console  
+- Choose the required options and launch the instance  
+
+---
+
+### 🔑 Step 5: Connect to EC2 Instance
+
 ssh -i your-key.pem ec2-user@<EC2-PUBLIC-IP>
 
-🐍 Step 6: Install Required Software on EC2
-Update system:
-sudo yum update -y
+---
 
-Install Python and Git:
-sudo yum install python3 git -y
+### 🐍 Step 6: Install Required Software on EC2
 
-Install pip:
-sudo yum install python3-pip -y
+Update system: sudo yum update -y
+Install Python and Git: sudo yum install python3 git -y
+Install pip: sudo yum install python3-pip -y
 
-📥 Step 7: Upload Project to EC2
-Clone from GitHub
+---
+
+### 📥 Step 7: Upload Project to EC2
+
 git clone https://github.com/your-username/Virtual-Career-Councellor.git
 cd Virtual-Career-Councellor
 
-📦 Step 8: Install Python Dependencies
+---
+
+### 📦 Step 8: Install Python Dependencies
+
 pip3 install -r requirements.txt
 
-▶️ Step 9: Run the Application on EC2
+---
+
+### ▶️ Step 9: Run the Application on EC2
+
 python3 app.py
+Make sure Flask runs on: app.run(host="0.0.0.0", port=5000)
 
-Make sure Flask runs on:
-app.run(host="0.0.0.0", port=5000)
+---
 
-🌐 Step 10: Access the Application
-Open browser and visit:
-http://<EC2-PUBLIC-IP>:5000
+### 🌐 Step 10: Access the Application
 
-Conclusion
+http://EC2-PUBLIC-IP:5000
 
-The Virtual Career Counsellor provides an efficient and scalable solution for personalized career guidance. By deploying the application on an AWS EC2 instance and using DynamoDB, SNS, and IAM, the system ensures secure data handling, reliable notifications, and controlled access. This project demonstrates practical use of cloud services to solve real-world problems effectively.
+---
+
+## ✅ Conclusion
+
+The **Virtual Career Counsellor** provides an efficient and scalable solution for personalized career guidance. By deploying the application on AWS using DynamoDB, SNS, IAM, and EC2, the system ensures secure data handling, reliable notifications, and controlled access. This project demonstrates the practical use of cloud services to solve real-world problems effectively.
