@@ -1,0 +1,673 @@
+body {
+    margin: 0;
+    font-family: 'Calibri';
+    background-color: #f3f6ff; 
+/* LIGHT & SOFT BACKGROUND */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+}
+
+/* ---------- NAVBAR FIX ---------- */
+.navbar {
+    background: white;
+    padding: 45px 60px;          /* bigger navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav-left {
+    font-size: 50px;
+    font-weight: 700;
+    color: #091b76;
+}
+
+/* Right links */
+.nav-right a {
+    margin-left: 35px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    color: #091b76;
+}
+
+.navbar a {
+    margin-left: 35px;
+    font-size: 27px;             /* bigger nav text */
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+}
+
+/* ---------- HOME HERO FIX ---------- */
+.home-container {
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 48px;             /* BIG heading */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.home-container p {
+    font-size: 20px;             /* readable paragraph */
+    width: 65%;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 35px;
+}
+
+/* ---------- GET STARTED BUTTON ---------- */
+.get-started-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #091b76;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.get-started-btn:hover {
+    background-color: #07155c;
+}
+
+/* ---------- FORM PAGES FIX ---------- */
+
+/* Page background */
+.form-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f6ff;
+}
+
+/* Make the form BIGGER */
+.form-container {
+    background: white;
+    padding: 45px 55px;
+    width: 450px;              /* increased width */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Heading */
+.form-container h2 {
+    font-size: 32px;           /* bigger heading */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Inputs */
+.form-container input {
+    width: 100%;
+    padding: 14px;             /* bigger input height */
+    font-size: 17px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+.form-container button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;           /* bigger button text */
+    background-color: #091b76;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #07155c;
+}
+
+/* Links */
+.form-container a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #091b76;
+}
+
+
+/* Counsel Dashboard */
+.dashboard {
+    min-height: 100vh;
+    background-color: #f3f6ff;
+    padding: 40px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #091b76;
+}
+
+.card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #091b76;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #07155c;
+}
+
+.logout-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logout-link a {
+    color: #091b76;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Navbar */
+.top-nav {
+    background: white;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.top-nav h2 {
+    margin: 0;
+    font-size: 36px;
+    color: #091b76;
+}
+
+.top-nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 27px;
+    color: #333;
+}
+
+
+/* Option Buttons */
+.option-buttons button {
+    padding: 14px 26px;
+    margin: 10px;
+    font-size: 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #091b76;
+    color: white;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.option-buttons button:hover {
+    background: #07155c;
+    transform: translateY(-3px);
+}
+
+/* Form Sections */
+.form-section {
+    display: none;
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+/* Make form centered */
+.form-section form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Bigger input box */
+.form-section input {
+    width: 420px;          /* KEY LINE */
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Generate button */
+.form-section button {
+    padding: 14px 26px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: #091b76;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background: #07155c;
+}
+
+
+/* Result Page Layout */
+.result-page {
+    min-height: 120vh;
+    background: #f3f6ff;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+
+.result-container h1 {
+    text-align: center;
+    color: #091b76;
+    margin-bottom: 25px;
+}
+
+/* AI text formatting */
+.result-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    white-space: pre-wrap;   /* keeps formatting but wraps nicely */
+}
+
+/* Make headings stand out */
+.result-content strong {
+    display: block;
+    font-size: 18px;
+    color: #091b76;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.result-content pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 26px;
+    background: #091b76;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #07155c;
+}
+
+.flash {
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.gender-group {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.gender-group label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* ---------- HOME BACKGROUND IMAGE ---------- */
+.home-bg {
+    height: calc(100vh - 90px); /* adjust for navbar */
+    background: url("/static/home-bg.png") no-repeat center;
+    background-size: 2300px;   /* keeps image clean */
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+/* Text content */
+.home-container {
+    max-width: 800px;
+    font-size: 60px;
+}
+
+.home-container h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* ---------- VERTICAL AUTH PAGE ---------- */
+.auth-vertical {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f8ff, #eef2ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Top text */
+.auth-top {
+    margin-top: 70px;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.auth-top h1 {
+    font-size: 54px;
+    color: #091b76;
+    margin-bottom: 15px;
+}
+
+.auth-top p {
+    font-size: 27px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Form area */
+.auth-form {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+/* Bigger form */
+.form-container {
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.register-container {
+    width: 600px;
+    padding: 45px 55px;
+}
+
+.register-container h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* ---------- LOGIN PAGE FIX ---------- */
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Inputs spacing */
+.form-container input {
+    margin-bottom: 19px;
+    padding: 17px;
+    font-size: 19px;
+}
+
+/* Divider line */
+.form-divider {
+    margin: 25px 0 15px;
+    height: 1px;
+    background: #ddd;
+}
+
+/* New user section (like reference image) */
+.new-user-text {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.new-user-text a {
+    color: #091b76;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.new-user-text a:hover {
+    text-decoration: underline;
+}
+
+/* Back link */
+.back-home {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 8px;
+    color: #555;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    color: #091b76;
+}
+
+.login-container {
+    width: 600px;
+    padding: 50px 81px;
+}
+
+.login-container h2 {
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- SERVICES PAGE ---------- */
+.services-page {
+    height:calc(100vh - 50px) ;
+    display: flex;
+    background: #f6f8ff;
+}
+
+/* Left image */
+.services-image {
+    flex: 1;
+    background: url("/static/services-bg.png") no-repeat center;
+    background-size: 1500px;
+}
+
+/* Right content */
+.services-content {
+    flex: 1;
+    padding: 0 60px;              /* only horizontal padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      /* vertical centering */
+    align-items: center;          /* horizontal centering */
+    text-align: center;           /* center text */
+}
+
+.services-content h1 {
+    font-size: 60px;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 600px;
+    color: #444;
+}
+
+/* Service cards */
+.service-card {
+    background: white;
+    padding: 50px 55px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+    color: #091b76;
+}
+
+.page-layout {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+}
+
+/* ABOUT PAGE */
+.about-page {
+    min-height: calc(100vh - 120px);
+    background: #f6f8ff;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 65px;
+    color: #091b76;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 50px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    gap: 25px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: lighter;
+    
+}
+
+.about-box {
+    background: white;
+    padding: 25px;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.about-box h2 {
+    justify-content: center;
+    color: #091b76;
+    margin-bottom: 10px;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box li {
+    margin-bottom: 8px;
+}
+
+.offer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: match-parent;
+}
+
+.offer-section ul {
+    list-style-position: inside;   /* brings bullets closer */
+    padding-left: 0;               /* removes left gap */
+    margin: 0 auto;                /* centers list block */
+}
+
+.offer-section li {
+    margin: 8px 0;
+}
+
+
+

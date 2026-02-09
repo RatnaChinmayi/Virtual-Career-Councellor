@@ -1,0 +1,5 @@
+Flask
+groq
+boto3
+bcrypt
+python-dotenv

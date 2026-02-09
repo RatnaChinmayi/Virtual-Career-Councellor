@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+    <h2>Virtual Career Counsellor</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="services-page">
+
+    <div class="services-image"></div>
+
+    <div class="services-content">
+
+        <h1>AI-Powered Career Guidance</h1>
+        <p class="services-desc">
+            Tell us what you want to explore, and our AI will guide you with
+            personalized recommendations, career paths, and job market insights.
+        </p>
+
+        <!-- OPTION BUTTONS -->
+        <div class="option-buttons">
+            <button type="button" onclick="showForm('course')">Course Recommendations</button>
+            <button type="button" onclick="showForm('career')">Career Path</button>
+            <button type="button" onclick="showForm('job')">Job Market Trends</button>
+        </div>
+
+        <!-- COURSE FORM -->
+        <div id="course" class="form-section" style="display:none;">
+            <form action="/generate_recommendations" method="POST">
+                <input type="text" name="career_name"
+                       placeholder="Enter your interests"
+                       autocomplete="off" required>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+
+        <!-- CAREER FORM -->
+        <div id="career" class="form-section" style="display:none;">
+            <form action="/generate_career_path" method="POST">
+                <input type="text" name="career_name"
+                       placeholder="Enter your interests"
+                       autocomplete="off" required>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+
+        <!-- JOB MARKET FORM -->
+        <div id="job" class="form-section" style="display:none;">
+            <form action="/job_market_trends" method="POST">
+                <input type="text" name="career_name"
+                       placeholder="Enter your interests"
+                       autocomplete="off" required>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function showForm(formId) {
+    document.getElementById("course").style.display = "none";
+    document.getElementById("career").style.display = "none";
+    document.getElementById("job").style.display = "none";
+
+    document.getElementById(formId).style.display = "block";
+}
+</script>
+
+</body>
+</html>
+

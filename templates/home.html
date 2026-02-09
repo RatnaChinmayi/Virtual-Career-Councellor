@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-left">
+        Virtual Career Counsellor
+    </div>
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="home-bg">
+    <div class="home-container">
+        <h1>Welcome to Virtual Career Counsellor</h1>
+
+        <p>
+            Our platform helps you explore the right career path using AI-driven
+            recommendations. Discover suitable courses, understand job market trends,
+            and make informed career decisions tailored to your skills and interests.
+        </p>
+
+        <a href="{{ url_for('login') }}">
+            <button class="get-started-btn">Get Started</button>
+        </a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    © 2026 Virtual Career Counsellor. All Rights Reserved.
+</footer>
+
+</body>
+</html>
