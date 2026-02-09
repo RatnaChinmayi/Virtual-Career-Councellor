@@ -104,7 +104,7 @@ def register():
         try:
             users_table.put_item(
                 Item={
-                    "email": email,
+                    "userId": email,
                     "password": hashed_password
                 },
                 ConditionExpression="attribute_not_exists(email)"
@@ -128,7 +128,10 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
 
-        response = users_table.get_item(Key={"email": email})
+        response = users_table.get_item(
+            Key={"userId": email}   # ✅ MUST match DynamoDB key name
+        )
+
         user = response.get("Item")
 
         if user and bcrypt.checkpw(
